@@ -1,0 +1,56 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+int wynik;
+char znak;
+ 
+int oblicz(int liczba1, int liczba2)
+{
+    switch(znak)
+    {
+        case '+':
+        wynik=liczba1+liczba2;
+        break;
+ 
+        case '-':
+        wynik=liczba1-liczba2;
+        break;
+ 
+        case '*':
+        wynik=liczba1*liczba2;
+        break;
+ 
+        case '/':
+        wynik=liczba1/liczba2;
+        break;
+ 
+        case '%':
+        wynik=liczba1%liczba2;
+        break;
+    }
+ 
+    return wynik;
+}
+ 
+int main()
+{
+    int liczba1;
+    int liczba2;
+ 
+    while(cin>>znak>>liczba1>>liczba2)
+    {
+    if(liczba2!=0)
+    {
+    wynik=oblicz(liczba1, liczba2);
+    }
+    else
+    {
+    cout<<"Nie mozna dzielic przez 0!";
+    break;
+    }
+    cout<<wynik<<endl;
+    }
+    return 0;
+}
+ 
