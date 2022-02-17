@@ -1,0 +1,47 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+void cukierki(int a, int b);
+int N, iloczyn;
+ 
+void cukierki(int a, int b)
+{
+   cin>>N;
+   N>=1;
+   N<=20;
+ 
+   for(int i=0; i<N; i++)
+   {
+   cin>>a>>b;
+   a>=10;
+   b<=30;
+ 
+   iloczyn=a*b;
+ 
+   while(a!=b)
+   {
+        if(a>b)
+        {
+            a=a-b;
+        }
+        else
+        {
+            b=b-a;
+        }
+ 
+   }
+   cout<<iloczyn/a<<endl;
+ 
+   }
+ 
+}
+ 
+int main()
+{
+   int a, b;
+ 
+   cukierki(a,b);
+ 
+   return 0;
+}
