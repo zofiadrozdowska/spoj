@@ -1,0 +1,36 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+void ile(int doughnuts);
+ 
+void ile(int doughnuts)
+{
+  int t, c, k, w;
+ 
+    cin>>t;
+ 
+    for(int i=0; i<t; i++)
+    {
+        cin>>c>>k>>w;
+        int waga=c*w;
+ 
+        if(waga<=k)
+        {
+            cout<<"yes"<<endl;
+        }
+        else
+        {
+            cout<<"no"<<endl;
+        }
+    }
+}
+ 
+int main()
+{
+    int doughnuts;
+    ile(doughnuts);
+ 
+    return 0;
+}
+ 
