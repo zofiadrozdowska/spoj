@@ -1,0 +1,48 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+int TestPierwszosci(int liczba)
+{
+    if(liczba<2) //liczby mniejsze od 2 nie sa liczbami pierwszymi
+    {
+        return 0;
+    }
+ 
+    for(int i=2; i*i<=liczba; i++) //wyszukiwanie dzielnikow liczby z zakresu od 2 do pierwiastka z danej liczby
+    {
+        if(liczba%i==0)
+        {
+            return 0;
+        }
+    }
+ 
+    return 1;
+}
+ 
+ 
+ 
+int main()
+{
+    int n;
+    int liczba;
+ 
+    cin>>n;
+ 
+    for(int i=0; i<n; i++)
+    {
+        cin>>liczba;
+ 
+        if(TestPierwszosci(liczba)==0)
+        {
+            cout<<"NIE"<<endl;
+        }
+        else
+        {
+            cout<<"TAK"<<endl;
+        }
+ 
+    }
+ 
+    return 0;
+}
