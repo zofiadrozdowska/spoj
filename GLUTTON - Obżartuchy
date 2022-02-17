@@ -1,0 +1,58 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+int ileZjeCiastek (int czas);
+int ileKupicPudelek(int ileZje, int M);
+ 
+ 
+int main()
+{
+    int t, N, M, czas;
+    int ileZje=0;
+    int ileKupic=0;
+ 
+    cin>>t;
+ 
+    for(int i=0; i<t; i++)
+    {
+        cin>>N>>M;
+ 
+        for(int j=0; j<N; j++)
+        {
+            cin>>czas;
+            ileZje += ileZjeCiastek(czas);
+        }
+        cout<<ileKupicPudelek(ileZje, M)<<endl;
+        ileZje=0;
+    }
+ 
+ 
+    return 0;
+}
+ 
+int ileZjeCiastek (int czas)
+{
+    int ileSekundWDobie = 86400;
+    int ileZje=0;
+ 
+    ileZje += ileSekundWDobie/czas;
+ 
+    return ileZje;
+}
+ 
+int ileKupicPudelek(int ileZje, int M)
+{
+    int ileKupic=0;
+ 
+    if(ileZje % M == 0)
+    {
+        ileKupic += ileZje/M;
+    }
+    else
+    {
+        ileKupic += (ileZje/M)+1;
+    }
+ 
+    return ileKupic;
+}
