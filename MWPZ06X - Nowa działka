@@ -1,0 +1,45 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+int kwadrat(int kroki);
+ 
+int kwadrat(int kroki)
+{
+    int d, wynik;
+    int x[1000];
+ 
+    cin >>d;
+ 
+ 
+    for(int i=0; i<d; i++)
+    {
+       cin >>x[i];
+    }
+ 
+    for(int i=0; i<d; i++)
+    {
+        if (d>=1 && d<=500)
+        {
+        wynik=x[i]*x[i];
+        cout <<wynik<<endl;
+        }
+        else
+        {
+        cout <<"Podales niewlasciwe liczby!";
+        break;
+        }
+    }
+ 
+    return wynik;
+}
+ 
+ 
+int main()
+{
+    int kroki;
+    kwadrat(kroki);
+ 
+ 
+    return 0;
+}
