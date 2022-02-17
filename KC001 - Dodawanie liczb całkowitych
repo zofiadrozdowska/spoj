@@ -1,0 +1,39 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+int dodawanie(int a,int b,int c);
+int wynik;
+ 
+ 
+int dodawanie(int a,int b,int c)
+    {
+    wynik=a+b+c;
+    return wynik;
+    }
+ 
+ 
+int main()
+{
+ 
+ int a, b, c;
+ 
+ cin>>a;
+ cout<<endl;
+ cin>>b;
+ cout<<endl;
+ cin>>c;
+ cout<<endl;
+ 
+ if(a,b,c<100)
+ {
+     cout <<dodawanie(a,b,c);
+ }
+ else
+ {
+ cout <<"Podales za duza liczbe!";
+ }
+ 
+ 
+    return 0;
+}
