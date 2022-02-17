@@ -1,0 +1,31 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+int liczba_miejsc(int n1, int k1, int n2, int k2);
+int suma;
+ 
+int liczba_miejsc(int n1, int k1, int n2, int k2)
+{
+    suma=n1*k1+n2*k2;
+    return suma;
+}
+ 
+int main()
+{
+    int n1, k1, n2, k2;
+ 
+    cin >>n1 >>k1 >>n2 >>k2;
+ 
+    if (n1>=1 && k1<=1000 && n2<=1000 && k2<=1000)
+    {
+        cout <<liczba_miejsc(n1,k1,n2,k2);
+    }
+    else
+    {
+        cout <<"Podales nieprawidlowe liczby!";
+    }
+ 
+ 
+    return 0;
+}
