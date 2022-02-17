@@ -1,0 +1,33 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+int liczba;
+void podzielnosc(int liczba);
+ 
+void podzielnosc(int liczba)
+{
+    int t,n,x,y;
+    cin >>t;
+ 
+    for(int i=0; i<t; i++)
+    {
+        cin >>n>>x>>y;
+ 
+        for (int j=0; j<n; j++)
+        {
+            if (j%x==0 && j%y!=0)
+            {
+                cout<<j<<" ";
+            }
+        }
+        cout<<endl;
+    }
+}
+ 
+int main()
+{
+    podzielnosc(liczba);
+ 
+    return 0;
+}
