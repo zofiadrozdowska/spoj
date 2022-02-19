@@ -1,0 +1,52 @@
+#include <iostream>
+#include <cstring>
+ 
+using namespace std;
+ 
+bool czyPalindrom(char wyraz[]);
+ 
+int main()
+{
+    int n;
+    char wyraz[100];
+ 
+    cin>>n;
+ 
+    for (int i=0; i<n; i++)
+    {
+        cin>>wyraz;
+ 
+        if(czyPalindrom(wyraz)==true)
+        {
+            cout<<"tak"<<endl;
+        }
+        else
+        {
+            cout<<"nie"<<endl;
+        }
+ 
+    }
+ 
+ 
+    return 0;
+}
+ 
+bool czyPalindrom(char wyraz[])
+{
+    int dlugosc = strlen(wyraz);
+ 
+    --dlugosc;
+ 
+    for(int i=0; i<=dlugosc/2; i++)
+    {
+        if(wyraz[i]!=wyraz[dlugosc-i])
+        {
+            return false;
+        }
+ 
+    }
+    return true;
+ 
+}
+ 
+ 
